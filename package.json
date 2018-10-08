@@ -1,6 +1,6 @@
 {
   "name": "ss-heap",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "jsnext:main": "dist/index.esm.js",
@@ -31,8 +31,7 @@
     "release": "standard-version",
     "prepublish": "npm run build"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/jest": "^23.3.1",
     "babel-core": "^6.26.3",
