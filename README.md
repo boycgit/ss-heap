@@ -2,14 +2,14 @@
 
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php) [![npm version](https://badge.fury.io/js/ss-heap.svg)](https://badge.fury.io/js/ss-heap)
 
-Data Structure Serial -  Queue
+Data Structure Serial -  Binary Heap
 
  - written in Typescript
  - inner use Singly-Linked List; 
  - fully tested
 
 Refer:
- - [前端学数据结构 - 栈（Stack）和 队列（Queue）](https://boycgit.github.io/ss-stack/)
+ - [前端学数据结构 - 二叉堆（Binary Heap）](https://boycgit.github.io/ss-heap/)
 
 ## Installation
 
@@ -20,7 +20,7 @@ npm install ss-heap --save
 ```
 
 ```javascript
-var Queue = require('ss-heap');
+var {MinHeap, MaxHeap} = require('ss-heap');
 ```
 
 ### Global object

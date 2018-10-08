@@ -21,7 +21,7 @@ import Comparator, { compareFunction } from './comparator';
  *     30                     40    50    100   40
  * ```
  */
-export default abstract class BinaryHeap<T> {
+export class BinaryHeap<T> {
   heapContainer: T[];
   compare: Comparator;
 
@@ -30,14 +30,14 @@ export default abstract class BinaryHeap<T> {
    * @param {compareFunction} comparatorFunction - function that implement compare operation
    * @memberof BinaryHeap
    */
-  constructor(comparatorFunction: compareFunction) {
-    if (new.target === BinaryHeap) {
-      throw new TypeError('Cannot construct Heap instance directly');
-    }
-
+  constructor(comparatorFunction?: compareFunction) {
     // Array representation of the heap.
     this.heapContainer = [];
     this.compare = new Comparator(comparatorFunction);
+  }
+
+  get length(): number {
+    return this.heapContainer.length;
   }
 
   /**
@@ -62,7 +62,7 @@ export default abstract class BinaryHeap<T> {
    * @type {boolean}
    * @memberof BinaryHeap
    */
-  get isEmpty(): boolean {
+  isEmpty(): boolean {
     return !this.heapContainer.length;
   }
 
@@ -311,7 +311,7 @@ export default abstract class BinaryHeap<T> {
     // Compare the parent element to its children and swap parent with the appropriate
     // child (smallest child for MinHeap, largest child for MaxHeap).
     // Do the same for next children after swap.
-    let currentIndex = 0;
+    let currentIndex = customStartIndex;
     let nextIndex: number | null = null;
 
     while (this.hasLeftChild(currentIndex)) {
@@ -366,5 +366,10 @@ export default abstract class BinaryHeap<T> {
     return foundItemIndices;
   }
 
-  abstract pairIsInTheCorrectOrder(firstElement, secondElement);
+  pairIsInTheCorrectOrder(firstElement, secondElement) {
+    throw new Error(`
+      You have to implement heap pair comparision method
+      for ${firstElement} and ${secondElement} values.
+    `);
+  }
 }

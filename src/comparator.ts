@@ -28,7 +28,7 @@ export default class Comparator {
    * @param {compareFunction} compareFunction - function that implement compare operation
    * @memberof Comparator
    */
-  constructor(compareFunction: compareFunction) {
+  constructor(compareFunction?: compareFunction) {
     this.compare = compareFunction || Comparator.defaultCompareFunction;
   }
 
