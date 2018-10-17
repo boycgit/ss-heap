@@ -366,7 +366,7 @@ export class BinaryHeap<T> {
     return foundItemIndices;
   }
 
-  pairIsInTheCorrectOrder(firstElement, secondElement) {
+  pairIsInTheCorrectOrder(firstElement, secondElement): boolean{
     throw new Error(`
       You have to implement heap pair comparision method
       for ${firstElement} and ${secondElement} values.

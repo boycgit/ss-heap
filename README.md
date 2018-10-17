@@ -5,7 +5,7 @@
 Data Structure Serial -  Binary Heap
 
  - written in Typescript
- - inner use Singly-Linked List; 
+ - inner use Array 
  - fully tested
 
 Refer:
