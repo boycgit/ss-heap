@@ -1,4 +1,4 @@
-import Comparator, { compareFunction } from './comparator';
+import Comparator, { compareFunction } from 'ss-comparator';
 
 /**
  * A Binary Heap is a Binary Tree with following properties.
